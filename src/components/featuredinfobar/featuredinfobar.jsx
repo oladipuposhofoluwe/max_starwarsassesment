@@ -1,21 +1,16 @@
 import Topbar from "../topbar/Topbar"
-import { Search } from '@material-ui/icons';
-
-
 import "./featuredinfobar.css"
 
-function Featuredinfobar() {
+function Featuredinfobar({title}) {
     return (
         <div className="featuredInfoBar">
             <div className="featuredInfoBarWrapper">
-                <p className="featuredInfoBarTitle">Dashboard</p>
+                <p className="featuredInfoBarTitle">{title }</p>
                 <Topbar/>
             </div>
             <div className="featuredInfoBarWrapper">
                 <p className="featuredInfoBarTitle"></p>
                 <input type="text" placeholder="search for vehicles" className="featuredInfoBarSearch" />
-                <Search className="searchIcon"/>
-
             </div>
         </div>
     )

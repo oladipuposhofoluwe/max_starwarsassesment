@@ -1,0 +1,17 @@
+table{
+    width: 100%;
+    color: #2c2c2c;
+}
+ thead{
+    border-bottom: var(--color-default) thin solid;
+}
+
+th, tr{
+    padding: 5px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+td{
+    padding: 10px;
+} 

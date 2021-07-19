@@ -1,48 +1,29 @@
+import React from "react";
+import { MenuLink } from "../menu-link/MenuLink";
+import "./sidebar.css";
 
-import { Dashboard, ShoppingBasket, LocalTaxi, Gradient } from '@material-ui/icons'
-import React from 'react'
-import "./sidebar.css"
+function Sidebar() {
+  const sidebarMenus = [
+    { text: 'dashboard', icon: '', link:'/dashboard' },
+    { text: 'starships', icon: '', link:'/starships' },
+    { text: 'people', icon: '', link:'/people' },
+    { text: 'vehicle', icon: '', link:'/vehicle' },
+    { text: 'species', icon: '', link:'/species' },
+  ];
 
- function Sidebar() {
-    return (
-        <div className="sidebar">
-            <div className="sidbarWrapper">
-                <div className="sidebarMenu">
-            <img className="logo" src="/image/logo.png" alt=""/>
-                    <ul className="sidebarList">
-                        <li className="sidebarListItem">
-                            <Dashboard className="sidebarListItemIcon"/>
-                            <span className="sidebarListItemList">Dashboard</span> 
-                        </li>
+  return (
 
-                        <li className="sidebarListItem">
-                            <Dashboard className="sidebarListItemIcon" />
-                            <span className="sidebarListItemList">Starships</span>    
-                        </li>
+      <div className="sidebar_wrapper">
+        <div className="sidebar_menu">
+          <img className="logo" src="/images/Star wars logo.png" alt="" />
+          {
+            sidebarMenus.map(({ text, icon, link }, index) => (
+              <MenuLink text={text} icon={icon} key={index} link={link} />
+              ))
+          }
+         </div>
+      </div>
+  );
+}
 
-                        <li className="sidebarListItem">
-                            <ShoppingBasket className="sidebarListItemIcon"/>
-                            <span className="sidebarListItemList">People</span> 
-                        </li>
-
-                        <li className="sidebarListItem">
-                            <LocalTaxi className="sidebarListItemIcon" />
-                            <span className="sidebarListItemList">Vehicles</span> 
-                        </li>
-
-                        <li className="sidebarListItem">
-                            <Gradient className="sidebarListItemIcon" />
-                            <span className="sidebarListItemList">Species</span> 
-
-                            
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    )
- }
-
- export default Sidebar
+export default Sidebar;

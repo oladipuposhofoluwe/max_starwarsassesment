@@ -1,0 +1,9 @@
+
+.dashboard-layout{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.dashboard-layout-body{
+    width: 100%;
+}

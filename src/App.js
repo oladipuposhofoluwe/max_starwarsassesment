@@ -6,22 +6,15 @@ import SearchBar from "./components/searchbar/searchbar";
 
 function App() {
   return (
- 
     <div>
-        <div className="container">
+      <div className="container">
         <Sidebar />
-
         <div className="others">
           <SearchBar />
           <Dashboard />
-
-
         </div>
-
-        </div>
-  
+      </div>
     </div>
- 
   );
 }
 
