@@ -1,19 +1,20 @@
-import Sidebar from "./components/sidebar/Sidebar";
+import React from "react";
 import "./app.css";
-import Dashboard from "./pages/dashboard/dashboard";
-import SearchBar from "./components/searchbar/searchbar";
 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Login from "./pages/login/Login";
+import Dashboard from "./pages/dashboard/dashboard";
+
+// import { Routes } from './Routes';
 function App() {
   return (
-    <div>
-      <div className="container">
-        <Sidebar />
-        <div className="others">
-          <SearchBar />
-          <Dashboard />
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+            <Route path="/login" exact component={Login} />
+            <Route path="/dashboard" exact component={Dashboard}/>
+      </Switch>
+      </Router>
+     
   );
 }
 
