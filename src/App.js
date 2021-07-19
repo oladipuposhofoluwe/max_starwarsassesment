@@ -1,6 +1,6 @@
-import Topbar from "./components/topbar/Topbar";
+// import Topbar from "./components/topbar/Topbar";
 import Sidebar from './components/sidebar/Sidebar'
-import "./app.css"
+// import "./app.css"
 import Dashboard from "./components/pages/dashboard/dashboard";
 import SearchBar from "./components/searchbar/searchbar";
 
