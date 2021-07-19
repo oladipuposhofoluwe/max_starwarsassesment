@@ -1,0 +1,24 @@
+.sidebar__menu-item {
+    display: flex;
+    color: var(--color-default);
+    align-items: center;
+    padding: 5px 20px;
+    margin: 15px auto;
+    text-decoration: none;
+  }
+  .menu-text {
+    text-transform: capitalize;
+  }
+  .sidebar__menu-item--active {
+      border-right: thin solid var(--color-active-icon);
+  }
+
+  .sidebar__menu-item:hover .menu-icon,
+  .sidebar__menu-item--active .meu-icon {
+    color: var(--color-active-icon);
+  }
+  
+  .sidebar__menu-item:hover .menu-text,
+  .sidebar__menu-item--active .meu-text {
+    color: var(--color-active-text);
+  }

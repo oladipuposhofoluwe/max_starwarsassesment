@@ -1,6 +1,4 @@
 import React from 'react'
-import { NotificationsNone, Forum } from '@material-ui/icons';
-// import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import "./topbar.css"
 
 function Topbar() {
@@ -13,15 +11,15 @@ function Topbar() {
                 <div className="topbarRigth">
                     
                 <div className="topbariconscontainer">
-                        <Forum className="icons"/>
+                        {/* <Forum className="icons"/> */}
                     </div>
                     
                     <div className="topbariconscontainer">
-                        <NotificationsNone className="icons"/>
+                        {/* <NotificationsNone className="icons"/> */}
                         <div className="topiconbadge"></div>
                     </div>
 
-                    <img src="/image/logo.png" alt="" className="avatar"/>
+                    <img src="./images/images@2x.png" alt="user profile" className="avatar"/>
 
                 </div>
             </div>
