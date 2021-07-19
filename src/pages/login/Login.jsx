@@ -14,9 +14,6 @@ class Login extends Component {
     
   }
 
-  
-
-
 
   // const [signIn, setSignIn] = useState('')
   // const [password, setPaasword] = useState('')

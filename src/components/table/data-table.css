@@ -1,17 +1,18 @@
-table{
+.simple-table{
     width: 100%;
     color: #2c2c2c;
+    font-size: 5px !important;
 }
- thead{
+ .simple-table thead{
     border-bottom: var(--color-default) thin solid;
 }
 
-th, tr{
+.simple-table th, .simple-table  tr{
     padding: 5px;
     text-align: left;
     text-transform: capitalize;
 }
 
-td{
+.simple-table td{
     padding: 10px;
 } 
