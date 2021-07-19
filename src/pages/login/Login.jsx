@@ -7,11 +7,10 @@ class Login extends Component {
     super(props);
 
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: ''
     };
 
-    
   }
 
 
@@ -19,20 +18,22 @@ class Login extends Component {
   // const [password, setPaasword] = useState('')
 
   handleSubmit = (e) => {
-
     e.preventDefault(e);
     let error = {};
-    // const passwordRegex = /(?=,*[0-9])/;
-    // if(this.state.password.length < 8 || this.state.password.con ){
-    //     error.password = "password must be atleast 8 character long"
-    // } else if (!passwordRegex.test(this.state.password)) {
-    //   error.password = "invalid password, must contain one number"
-    //   return error;
-    // } else {
-    //   this.props.history.push("/")
-    // }
+    const passwordRegex = /(?=,*[0-9])/;
+    const passwordRegex22 = /(@)/
 
-  console.log("its clicking")
+    if (this.state.email.length < 0 || !passwordRegex22.test(this.state.email) ) {
+      error.email = "invalid email"
+    } else if(this.state.password.length < 8 ){
+        error.password = "password must be atleast 8 character long"
+    } else if (!passwordRegex.test(this.state.password)) {
+      error.password = "invalid password, must contain one number"
+      return error;
+    } else {
+      this.props.history.push("/dashboard")
+    }    
+    // this.props.history.push("/dashboard")
 
   };
 
@@ -73,10 +74,12 @@ class Login extends Component {
                   <input
                     type="email"
                     name="email"
+                    id="email"
+                    required
                     placeholder="Email address"
                     onChange={(e)=>this.setState({email: e.target.value})}
                     value={email}
-                    required
+                    
                   />
                 </div>
 
